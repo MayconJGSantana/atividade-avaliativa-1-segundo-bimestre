@@ -1,6 +1,6 @@
 programa
 {
-	inclua biblioteca Texto
+	inclua biblioteca Texto
 	inclua biblioteca Util
 	funcao vazio espacos(inteiro quantidade_espacos) {
 		para (inteiro i = 0; i < quantidade_espacos; i++) {
@@ -42,9 +42,7 @@ programa
 					pare
 				}
 			}
-			para (i = 1; i < idade; i++) {
-				soma_idades += i
-			}
+			soma_idades = idade * (idade + 1) / 2
 			escreva("A soma de todas a idades que já tiveste, portanto, desconsiderando a que ainda tens, é igual a ", soma_idades, ".")
 			aguarde(5000)
 			limpa()
