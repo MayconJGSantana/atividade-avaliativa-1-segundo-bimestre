@@ -34,7 +34,6 @@ programa
 		inteiro quantidade_litros = 0
 		inteiro preco_lata = 0
 		real litros_restantes = 0.0
-		inteiro i
 		const inteiro CASAS_DECIMAIS = 2
 		const inteiro PRECO_FIXO_LATA = 480
 		const inteiro LITRO_POR_METROS = 3
@@ -53,7 +52,7 @@ programa
 			}
 			quantidade_litros = Tipos.real_para_inteiro(metro_quadrado / LITRO_POR_METROS)
 			quantidade_latas = quantidade_litros / LITROS_POR_LATA
-			se (Texto.numero_caracteres(Texto.extrair_subtexto(Tipos.real_para_cadeia(metro_quadrado / LITRO_POR_METROS), Texto.posicao_texto(".", Tipos.real_para_cadeia(metro_quadrado / LITRO_POR_METROS), 0) + 1, Texto.numero_caracteres(Tipos.real_para_cadeia(metro_quadrado / LITRO_POR_METROS)))) - 1 > 0 ou Texto.numero_caracteres(Texto.extrair_subtexto(Tipos.real_para_cadeia(metro_quadrado / LITRO_POR_METROS), Texto.posicao_texto(".", Tipos.real_para_cadeia(metro_quadrado / LITRO_POR_METROS), 0) + 1, Texto.numero_caracteres(Tipos.real_para_cadeia(metro_quadrado / LITRO_POR_METROS)))) - 1 == 0 e quantidade_latas == 0) {
+			se (quantidade_litros % LITROS_POR_LATA != 0) {
 				quantidade_latas += 1
 			}
 			litros_restantes = quantidade_latas * LITROS_POR_LATA - metro_quadrado / LITRO_POR_METROS
