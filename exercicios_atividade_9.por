@@ -1,3 +1,4 @@
+
 programa
 {
 	inclua biblioteca Matematica
@@ -52,7 +53,7 @@ programa
 			}
 			quantidade_litros = Tipos.real_para_inteiro(metro_quadrado / LITRO_POR_METROS)
 			quantidade_latas = quantidade_litros / LITROS_POR_LATA
-			se (quantidade_litros % LITROS_POR_LATA != 0) {
+			se (metro_quadrado / LITRO_POR_METROS != 0 ou metro_quadrado / LITRO_POR_METROS == 0 e quantidade_latas == 0) {
 				quantidade_latas += 1
 			}
 			litros_restantes = quantidade_latas * LITROS_POR_LATA - metro_quadrado / LITRO_POR_METROS
