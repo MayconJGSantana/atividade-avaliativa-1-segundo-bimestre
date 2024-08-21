@@ -60,7 +60,7 @@ programa
 			escreva("Para cobrir uma parede de ", metro_quadrado, " metros quadradados é necessário ", quantidade_latas, " latas,\n")
 			escreva("cada lata é R$480,00 reais, logo, para comprar as latas necessárias, custará ", preco_lata, " reais.\n")
 			escreva("Além disso, restará ", Matematica.arredondar(quantidade_latas * LITROS_POR_LATA - metro_quadrado / LITRO_POR_METROS, CASAS_DECIMAIS), " litros.")
-			aguarde(3000)
+			aguarde(8000)
 			limpa()
 		}
 	}
