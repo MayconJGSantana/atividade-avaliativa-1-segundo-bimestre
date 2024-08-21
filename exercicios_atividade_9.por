@@ -1,4 +1,3 @@
-
 programa
 {
 	inclua biblioteca Matematica
