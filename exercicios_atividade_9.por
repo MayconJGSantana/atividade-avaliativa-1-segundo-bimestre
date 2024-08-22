@@ -31,7 +31,7 @@ programa
 	{
 		real metro_quadrado = 0.0
 		inteiro quantidade_latas = 0
-		inteiro quantidade_litros = 0
+		real quantidade_litros = 0.0
 		inteiro preco_lata = 0
 		real litros_restantes = 0.0
 		const inteiro CASAS_DECIMAIS = 2
@@ -50,9 +50,9 @@ programa
 					pare
 				}
 			}
-			quantidade_litros = Tipos.real_para_inteiro(metro_quadrado / LITRO_POR_METROS)
+			quantidade_litros = metro_quadrado / LITRO_POR_METROS
 			quantidade_latas = quantidade_litros / LITROS_POR_LATA
-			se (quantidade_litros % LITROS_POR_LATA != 0 ou quantidade_litros % LITROS_POR_LATA == 0 e quantidade_latas == 0) {
+			se (quantidade_litros / LITROS_POR_LATA > quantidade_latas) {
 				quantidade_latas += 1
 			}
 			litros_restantes = quantidade_latas * LITROS_POR_LATA - metro_quadrado / LITRO_POR_METROS
